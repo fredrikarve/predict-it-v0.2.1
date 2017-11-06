@@ -1,5 +1,4 @@
 # Predict-IT project  
-:memo: Please see the Git-Guide provided on the [Google Drive](https://docs.google.com/document/d/1iW_MJj_O6NbshGCFvUFfOD6Qp4abY_r1RmO9q2Q9jUU/edit#heading=h.si76efyecd3x). It can be found in ../PredictIT PUM C4/Development/Git or via previous link.  
 ***  
 
 ### **Installation**   
