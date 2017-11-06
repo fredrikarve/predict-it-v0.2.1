@@ -1,0 +1,17 @@
+nltk
+app
+newspaper3k
+Flask-SQLAlchemy==2.1
+Flask
+sqlalchemy
+db
+jinja2
+numpy
+pandas
+tensorflow
+flask_restful
+flask_api
+requests
+sklearn
+scipy
+apscheduler

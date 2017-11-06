@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block nav %}
+{{super()}}
+{% endblock %}
+
+
+{% block content %}
+
+<header>
+    <h1>User view</h1>
+</header>
+
+
+
+<h2>Latest news</h2>
+<ul>
+    {% for n in news %}
+    <li> {{ n }} </li>
+    {% endfor %}
+</ul>
+
+
+<h2>Recommended news</h2>
+<p>
+    Title: {{ userPrediction[0]}}
+    <br/> Category: {{ userPrediction[1]}}
+</p>
+
+<h2>Top movies</h2>
+
+
+
+<h2>Recommended movies</h2>
+<ul>
+    {% for i in range(1,9) %}
+    <li>
+        <p>
+            {{ userPrediction[i*2] }}
+            {{userPrediction[i*2+1] }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+<!-- Site footer -->
+<footer class="footer">
+    <p>&copy; 2017 PredictIT, Inc.</p>
+</footer>
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block nav %}
+{{super()}}
+{% endblock %}
+
+{% block content %}
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:100px; margin-right:100px; margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h3><b><i class="fa fa-dashboard"></i>My Dashboard</b></h3>
+    <h4>General Stats</h4>
+  </header>
+
+
+  <div class="w3-container">
+    <p>Total catalogue watched</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-red" style="width:25%">+25%</div>
+    </div>
+    <p></p>
+    <p>Recommended content clicked</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-yellow" style="width:50%">50%</div>
+    </div>
+    <p></p>
+    <p>Recommended content clicked and viewed</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-green" style="width:75%">75%</div>
+    </div>
+  </div>
+  <p></p>
+
+  <div class="w3-container">
+    <h4>Top 5 most viewed content</h4>
+    <p>(Show 5 rows of content here)</p>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Top 5 breaking news</h4>
+        <p>
+          Title: {{ userPrediction[0]}}
+          Category: {{ userPrediction[1]}}
+        </p>
+
+      </div>
+      <div class="col-md-6">
+        <h4>Recommended related content</h4>
+        <p>
+          <ul>
+            {% for i in range(1,9) %}
+            <li>
+              <p>
+                {{ userPrediction[i*2] }}
+                {{userPrediction[i*2+1] }}
+              </p>
+            </li>
+        {% endfor %}
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h4>Recommended content viewed curve</h4>
+  </div>
+
+  <div class="w3-container">
+    <h4>Filter by</h4>
+
+  </div>
+
+  <!-- Site footer -->
+  <footer class="w3-container w3-padding-16">
+    <p>&copy; 2017 PredictIT, Inc.</p>
+  </footer>
+
+  {% endblock %}
+</div>
