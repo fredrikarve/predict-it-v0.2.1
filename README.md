@@ -18,8 +18,8 @@ Updated 2017-11-06.
     8. Now you can install all libraries that need to be installed with pip by typing `pip install PACKAGENAME`  
     9. If you type `conda list` you will see a list of all installed packages.  
 3. Install requirements in requirements.txt in root directory  
-4. Run the file `run_project.py`. This may take some time if it is the first time the project is started.
-5. Go to  http://127.0.0.1:5000/ to see the Flask application  
+4. Run the file `run_project.py`. This may take some time if it is the first time the project is started. It creates a database, trains the categorization model (which takes a few minutes the first time you run) then activates the news getter (which fills the DB). Then it starts the Flask server and the Flask API which communicates with the server. Once this is done it will take some time for the ML-model to train, and for news to be added to the DB. Before this happens you cannot proceed to step 5. 
+5. Go to  http://127.0.0.1:5000/ to see the Flask application.  
 6. Login using "admin" as username and password.  
   a) You will see the operators views when logging in.
   b) When pressing the user demo The ML-model will load and eventually return a prediction. This indicates if the user would likely enjoy the movie or not. The prediction might vary from 1-5 where 5 is good suggestion and 1 is a bad suggestion. Might take a few seconds.  
